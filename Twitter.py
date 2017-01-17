@@ -19,7 +19,9 @@ while sayac==1: #Sayaç 1 olduğu sürecek bu işlemi yap diyoruz ve aşağıdak
     time.sleep(2)#Bu işlemleri yaptıktan sonra 2 sn boyunca bekliyor
     if twit=="Calistir":#Bu kısımda eğer son atılan tweet Calistir ise aşağıdaki işlemleri yapmaya başla
         os.system('python LedYak.py')#Ledimizi yakan dosyayı çalıştırıyor
+        api.update_status(status="Led yakildi")
         os.system('python mp3cal.py')#Mp3 ü müzü çalan dosyayı çalıştırıyor
+        api.update_status(status="MP3 caliniyor")
         break#İstediğimiz işlemi yaptığı için döngüden çıkıyor
 
 
